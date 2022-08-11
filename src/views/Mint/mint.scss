@@ -1,0 +1,104 @@
+.mint-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+
+  width: 89%;
+  margin: auto;
+  height: 100%;
+
+  .mint-infos-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .mint-img{
+      padding: 10px;
+      width: 300px;
+      border-radius: 10px;
+      background-color: #00000099;
+      padding: 10px;
+      z-index: 6;
+      position: relative;
+    }
+    .mint-sold{
+      position: relative;
+      margin-top: 10px;
+      p{
+        font-family: Montserrat SemiBold;
+        font-weight: 600;
+        font-size: 18px;
+        color: #FFFFFF;
+      }
+    }
+    .mint-user{
+      position: relative;
+      margin-top: 30px;
+      p{
+        font-family: Montserrat SemiBold;
+        font-weight: 600;
+        font-size: 18px;
+        color: #FFFFFF;
+      }
+    }
+    .mint-slider{
+      margin-top: 40px;
+      width: 300px;
+      .mint-number{
+        position: relative;
+        text-align: center;
+        padding: 5px;
+        .mint-number-div{
+          background-color: #232633;
+          cursor: pointer;
+          &:hover{
+            background-color: #1b1f30;
+          }
+          &:active{
+            background-color: #323337;
+          }
+          border-radius: 10px;
+          padding: 15px;
+          p{
+            font-family: Montserrat SemiBold;
+            font-weight: 600;
+            font-size: 18px;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+    .mint-btn{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 190px;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: rgba(12, 218, 34, 0.8);
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 30px;
+      &:hover{
+        background-color: rgba(12, 218, 63);
+      }
+      &:active{
+        background-color: rgba(0, 94, 22, 0.8);
+      }
+      p{
+        font-family: Montserrat SemiBold;
+        font-weight: 600;
+        font-size: 18px;
+        color: #FFFFFF;
+      }
+    }
+    .mint-wallet{
+      position: relative;
+      margin-top: 30px;
+    }
+  }
+}
