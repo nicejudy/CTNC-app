@@ -19,9 +19,9 @@ function Mint() {
 
     const [value, setValue] = useState<number>(1);
 
-    const onMint = async () => {
+    const onMint = async (tag: number) => {
         if (await checkWrongNetwork()) return;
-        dispatch(createNft({ number: value, provider, address, networkID: chainID, handleClose: () => {} }));
+        dispatch(createNft({ number: value, provider, address, tag, networkID: chainID, handleClose: () => {} }));
     };
 
     const nftMintedSupply = useSelector<IReduxState, number>(state => {
@@ -132,7 +132,7 @@ function Mint() {
                         <p>Mint {value == 1 ? `${value} NFT` : `${value} NFTs`}</p>
                         &nbsp;&nbsp;<CircularProgress size={15} color="inherit" />
                     </div> : 
-                    <div className="mint-btn" onClick={onMint}>
+                    <div className="mint-btn" onClick={() => onMint(tag)}>
                         <p>Mint {value == 1 ? `${value} NFT` : `${value} NFTs`}</p>
                     </div> :
                     <></> :

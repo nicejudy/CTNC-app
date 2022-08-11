@@ -17,11 +17,12 @@ interface ICreateNft {
     number: number;
     provider: StaticJsonRpcProvider | JsonRpcProvider;
     address: string;
+    tag: number;
     networkID: Networks;
     handleClose: () => void;
 }
 
-export const createNft = createAsyncThunk("mint/createNft", async ({ number, provider, address, networkID, handleClose }: ICreateNft, { dispatch }) => {
+export const createNft = createAsyncThunk("mint/createNft", async ({ number, provider, address, tag, networkID, handleClose }: ICreateNft, { dispatch }) => {
     if (!provider) {
         dispatch(warning({ text: messages.please_connect_wallet }));
         return;
@@ -34,7 +35,11 @@ export const createNft = createAsyncThunk("mint/createNft", async ({ number, pro
 
     try {
         const gasPrice = await getGasPrice(provider);
-        const mintPrice = Number(await nftManager.mintPrice()) / Math.pow(10, 18);
+        // const mintPrice = Number(await nftManager.mintPrice()) / Math.pow(10, 18);
+
+        const mintPrice = tag != 0 ? tag != 1 ? 0.1 : 0.08 : 0.05;
+
+        console.log(mintPrice)
         const etherValue = mintPrice * number;
 
         tx = await nftManager.createNFTWhitelisted(number, {
