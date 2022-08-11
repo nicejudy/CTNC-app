@@ -151,7 +151,7 @@ function App() {
             </Route> */}
 
             <Route exact path="/">
-                <Redirect to="/dashboard" />
+                <Redirect to="/mint" />
             </Route>
 
             <Route component={NotFound} />
