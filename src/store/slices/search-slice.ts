@@ -6,7 +6,7 @@ import { CmlContract, NftManagerContract } from "../../abi";
 
 import { JsonRpcProvider, StaticJsonRpcProvider } from "@ethersproject/providers";
 import { multicall, setAll } from "../../helpers";
-import { Networks, USDC_DECIMALS, META_JSONS, IPFS_URL, getAddresses } from "../../constants";
+import { Networks, USDC_DECIMALS, META_JSONS, META_URL, IPFS_URL, getAddresses } from "../../constants";
 import { IUserInfoDetails } from "./account-slice";
 import { RootState } from "../store";
 
@@ -148,7 +148,8 @@ export const loadIdDetails = async ({ networkID, id }: ILoadIdDetails) => {
             supporters[j] = supporter;
         }
 
-        const metaUrl = `${IPFS_URL}${META_JSONS}/${Number(nftData[i][0])}`;
+        // const metaUrl = `${IPFS_URL}${META_JSONS}/${Number(nftData[i][0])}`;
+        const metaUrl = `${META_URL}${Number(nftData[i][0])}`;
 
         const res = await axios(metaUrl);
         const attributes = res.data.attributes;

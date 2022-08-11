@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 // import { IReduxState } from "src/store/slices/state.interface";
 // import { IAccountSlice } from "src/store/slices/account-slice";
 import { Link } from "@material-ui/core";
-import { getAddresses, Networks, META_IMAGES, IPFS_URL, OPENSEA_ITEM_URL, INVITE_LINK } from "src/constants";
+import { getAddresses, Networks, META_IMAGES, IMAGE_URL, IPFS_URL, OPENSEA_ITEM_URL, INVITE_LINK } from "src/constants";
 import TigerModal from "../TigerModal";
 import "./apecard.scss";
 import OwnerBadge from "src/assets/icons/owner-badge.png";
@@ -17,7 +17,8 @@ interface IApeCardProps {
 function ApeCard({ nftId, handleOpen }: IApeCardProps) {
     const addresses = getAddresses(Networks.ETH);
 
-    const imageUrl = `${IPFS_URL}${META_IMAGES}/${nftId}.png`;
+    // const imageUrl = `${IPFS_URL}${META_IMAGES}/${nftId}.png`;
+    const imageUrl = `${IMAGE_URL}${nftId}.png`;
 
     const Clipboard = () => {
         navigator.clipboard.writeText(`${INVITE_LINK}${nftId}`);

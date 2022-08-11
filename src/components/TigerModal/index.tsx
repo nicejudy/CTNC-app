@@ -17,7 +17,7 @@ import { INftInfoDetails } from "src/store/slices/account-slice";
 import { useWeb3Context } from "src/hooks";
 import { warning } from "src/store/slices/messages-slice";
 import { messages } from "src/constants/messages";
-import { ETH_ADDRESSES, Networks, META_IMAGES, IPFS_URL, INVITE_LINK, OPENSEA_ITEM_URL, ETHSCAN_URL, META_JSONS, DEFAULD_NETWORK } from "src/constants";
+import { ETH_ADDRESSES, Networks, META_IMAGES, IMAGE_URL, IPFS_URL, INVITE_LINK, OPENSEA_ITEM_URL, ETHSCAN_URL, META_JSONS, DEFAULD_NETWORK } from "src/constants";
 import { utils } from "ethers";
 import { String } from "lodash";
 import CmlIcon from "src/assets/icons/token.png";
@@ -41,8 +41,8 @@ function TigerModal({ open, handleClose, nftId }: ITigerProps) {
     // const nftId = nftId.toString();
     const nftLastTimeStamp = nfts.length == 0 ? 0 : nfts[0].lastProcessingTimestamp;
 
-    // const imageUrl = `https://ipfs.io/ipfs/${META_IMAGES}/${nft.id}.png`;
-    const imageUrl = `${IPFS_URL}${META_IMAGES}/${nftId}.png`;
+    // const imageUrl = `${IPFS_URL}${META_IMAGES}/${nftId}.png`;
+    const imageUrl = `${IMAGE_URL}${nftId}.png`;
 
 
     const pendingTransactions = useSelector<IReduxState, IPendingTxn[]>(state => {
