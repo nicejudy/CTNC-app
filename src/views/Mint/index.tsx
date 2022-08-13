@@ -94,8 +94,11 @@ function Mint() {
                         <img src={NFTGIF} width="300px" />
                     </div>
                     <div className="mint-sold">
-                        <p>Minted {`${new Intl.NumberFormat("en-US").format(Math.floor(nftMintedSupply))} / ${new Intl.NumberFormat("en-US").format(Math.floor(nftTotalSupply))}`}</p>
+                        <p>Presale ends at 15:00 2022-08-14 UTC</p>
                     </div>
+                    {/* <div className="mint-sold">
+                        <p>Minted {`${new Intl.NumberFormat("en-US").format(Math.floor(nftMintedSupply))} / ${new Intl.NumberFormat("en-US").format(Math.floor(nftTotalSupply))}`}</p>
+                    </div> */}
                     <div className="mint-slider">
                         {/* <PrettoSlider
                             valueLabelDisplay="auto"
