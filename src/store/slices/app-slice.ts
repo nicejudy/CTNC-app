@@ -90,25 +90,20 @@ export const loadAppDetails = createAsyncThunk(
             },
         ]
 
-        // const cmlPrice = await getMarketPrice(networkID, provider);
-        const cmlPrice = 0;
+        const cmlPrice = await getMarketPrice(networkID, provider);
 
-        // const [[cmlTotalSupply], [cmlBuyFee], [cmlSellFee], [cmlTransferFee], [cmlLimit]] = await multicall(CmlContract, calls_cml);
+        const [[cmlTotalSupply], [cmlBuyFee], [cmlSellFee], [cmlTransferFee], [cmlLimit]] = await multicall(CmlContract, calls_cml);
         const [[nftTotalSupply], [nftMintedSupply], [totalValueLocked], [totalNftRewardClaimed], [compoundDelay], [stakeMinValue], [claimFee], [compoundFee], [rewardPerDay]] = await multicall(NftManagerContract, calls_nft);
 
         return {
             loading,
             cmlPrice,
-            // cmlTotalSupply: ethers.utils.formatUnits(cmlTotalSupply, "ether"),
-            cmlTotalSupply: "0",
+            cmlTotalSupply: ethers.utils.formatUnits(cmlTotalSupply, "ether"),
             totalValueLocked: ethers.utils.formatUnits(totalValueLocked, "ether"),
-            // cmlBuyFee,
-            cmlBuyFee: 0,
-            // cmlSellFee,
-            cmlSellFee: 0,
-            cmlTransferFee: 0,
-            // cmlLimit: ethers.utils.formatUnits(cmlLimit, "ether"),
-            cmlLimit: "0",
+            cmlBuyFee,
+            cmlSellFee,
+            cmlTransferFee,
+            cmlLimit: ethers.utils.formatUnits(cmlLimit, "ether"),
             nftTotalSupply,
             nftMintedSupply,
             totalNftRewardPerDayFor: parseInt(ethers.utils.formatUnits(totalValueLocked, "ether")) * 86400 * Number(rewardPerDay) / 1e11,

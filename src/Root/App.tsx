@@ -98,8 +98,8 @@ function App() {
         <Switch>
             <Route exact path="/dashboard">
                 <ViewBase>
-                    {/* <Dashboard /> */}
-                    <ComingSoon />
+                    <Dashboard />
+                    {/* <ComingSoon /> */}
                 </ViewBase>
             </Route>
 
@@ -130,15 +130,15 @@ function App() {
 
             <Route exact path="/swap">
                 <ViewBase>
-                    {/* <Swap /> */}
-                    <ComingSoon />
+                    <Swap />
+                    {/* <ComingSoon /> */}
                 </ViewBase>
             </Route>
 
             <Route exact path="/chart">
                 <ViewBase>
-                    {/* <Chart /> */}
-                    <ComingSoon />
+                    <Chart />
+                    {/* <ComingSoon /> */}
                 </ViewBase>
             </Route>
 
@@ -151,7 +151,7 @@ function App() {
             </Route> */}
 
             <Route exact path="/">
-                <Redirect to="/mint" />
+                <Redirect to="/dashboard" />
             </Route>
 
             <Route component={NotFound} />

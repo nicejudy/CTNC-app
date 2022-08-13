@@ -359,7 +359,7 @@ function Dashboard() {
                         <Grid item lg={4} md={6} sm={6} xs={12}>
                             <div className="dashboard-card">
                                 <div className="card-title">
-                                    <p>My USDC&nbsp;</p>
+                                    <p>My USDT&nbsp;</p>
                                     {/* <div className="card-title-info">
                                         <img src={InfoImg} width="16px" />
                                         <span className="card-title-tooltip">Tooltip text</span>

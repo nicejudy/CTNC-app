@@ -69,6 +69,7 @@
           padding: 13px 20px;
           align-items: center;
           display: flex;
+          justify-content: space-between;
           cursor: pointer;
 
           &:hover{
@@ -85,6 +86,26 @@
               line-height: 20px;
               color: #FFFFFF;
           }
+      }
+      .tooltip-item-text{
+        padding: 13px 30px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        p{
+            margin-left: 10px;
+            font-family: Montserrat SemiBold;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+      }
+      .tooltip-item-line{
+        border-bottom: 1px solid #ffffff;
       }
   }
 }

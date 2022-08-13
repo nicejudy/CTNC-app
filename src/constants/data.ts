@@ -26,9 +26,8 @@ export const DISCORD_URL = "https://discord.gg/ctnc";
 
 export const TELEGRAM_URL = "https://t.me/official_ctnc";
 
-// export const DEXSCREENER_URL = "https://dexscreener.com/ethereum/";
-export const DEXSCREENER_URL = "";
+export const DEXSCREENER_URL = "https://dexscreener.com/ethereum/0xD5C6E198a989122aAc58BAD8F316F2c998dE23BB";
 
-export const SWAP_URL = "https://app.uniswap.org/#/swap?chain=rinkeby&";
+export const SWAP_URL = "https://app.uniswap.org/#/swap?chain=mainnet&";
 
 export const INVITE_LINK = "https://app.cryptotigernode.club/find?id=";

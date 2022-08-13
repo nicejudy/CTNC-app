@@ -55,7 +55,7 @@ function Header({ handleDrawerToggle, drawe }: IHeader) {
                         <img src={MenuIcon} alt="" width="30" />
                     </div>
                     <div className="dapp-topbar-btns-wrap">
-                        {/* <ApeuButton /> */}
+                        <ApeuButton />
                         <ConnectButton />
                     </div>
                 </Toolbar>

@@ -103,7 +103,7 @@ function NftButton({ action, nftId, actionTime }: INftButtonProps) {
             onClaimReward(0);
         };
     } else if (action == "claim-usd") {
-        buttonText = "Claim USDC";
+        buttonText = "Claim USDT";
         className = timeLeft == 0 ? "nft-button" : "nft-button disabled";
         clickFunc = () => {
             onClaimReward(1);
