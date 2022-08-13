@@ -289,7 +289,7 @@ function TigerModal({ open, handleClose, nftId }: ITigerProps) {
                                     </div>
                                 </div>
                                 <div className="tm-interact-item">
-                                    {timeLeft <= 0 ? <OutlinedInput
+                                    {/* {timeLeft <= 0 ? <OutlinedInput
                                         type="text"
                                         placeholder="Input Amount"
                                         className="tm-interact-input-section"
@@ -306,10 +306,10 @@ function TigerModal({ open, handleClose, nftId }: ITigerProps) {
                                     /> : <div className="tm-interact-warning">
                                             <p>You have to wait some time.</p>
                                         </div>
-                                    }
-                                    {/* <div className="tm-interact-warning">
+                                    } */}
+                                    <div className="tm-interact-warning">
                                         <p>You have to wait for Public-Sale.</p>
-                                    </div> */}
+                                    </div>
                                     <div className="tm-interact-item-wrapper">
                                         <p className="tm-interact-type">Stake $CML</p>
                                         {/* {address && DEFAULD_NETWORK == providerChainID ?
