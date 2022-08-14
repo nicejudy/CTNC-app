@@ -289,7 +289,7 @@ function TigerModal({ open, handleClose, nftId }: ITigerProps) {
                                     </div>
                                 </div>
                                 <div className="tm-interact-item">
-                                    {/* {timeLeft <= 0 ? <OutlinedInput
+                                    {timeLeft <= 0 ? <OutlinedInput
                                         type="text"
                                         placeholder="Input Amount"
                                         className="tm-interact-input-section"
@@ -306,13 +306,13 @@ function TigerModal({ open, handleClose, nftId }: ITigerProps) {
                                     /> : <div className="tm-interact-warning">
                                             <p>You have to wait some time.</p>
                                         </div>
-                                    } */}
-                                    <div className="tm-interact-warning">
+                                    }
+                                    {/* <div className="tm-interact-warning">
                                         <p>You have to wait for Public-Sale.</p>
-                                    </div>
+                                    </div> */}
                                     <div className="tm-interact-item-wrapper">
                                         <p className="tm-interact-type">Stake $CML</p>
-                                        {/* {address && DEFAULD_NETWORK == providerChainID ?
+                                        {address && DEFAULD_NETWORK == providerChainID ?
                                         timeLeft <= 0 ? 
                                         pendingTransactions.length > 0 ? 
                                         <div className="tm-interact-action">
@@ -325,10 +325,10 @@ function TigerModal({ open, handleClose, nftId }: ITigerProps) {
                                         <div className="tm-interact-action disabled">
                                             <p>{new Date(timeLeft * 1000).toISOString().substring(11, 19)}</p>
                                         </div> :
-                                        <div className="txmodal-wallet"><ConnectMenu /></div>} */}
-                                        <div className="tm-interact-action disabled">
+                                        <div className="txmodal-wallet"><ConnectMenu /></div>}
+                                        {/* <div className="tm-interact-action disabled">
                                             <p>Coming</p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="tm-interact-item">

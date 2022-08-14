@@ -94,7 +94,7 @@ function Mint() {
                         <img src={NFTGIF} width="300px" />
                     </div>
                     <div className="mint-sold">
-                        <p>Presale ends at 15:00 2022-08-14 UTC</p>
+                        <p>Public sale is now live!</p>
                     </div>
                     {/* <div className="mint-sold">
                         <p>Minted {`${new Intl.NumberFormat("en-US").format(Math.floor(nftMintedSupply))} / ${new Intl.NumberFormat("en-US").format(Math.floor(nftTotalSupply))}`}</p>
@@ -119,7 +119,7 @@ function Mint() {
                             }
                         </Grid>
                     </div>
-                    {tag == 0 && <div className="mint-user">
+                    {/* {tag == 0 && <div className="mint-user">
                         <p>Your address is OG </p>
                     </div>}
                     {tag == 1 && <div className="mint-user">
@@ -127,9 +127,9 @@ function Mint() {
                     </div>}
                     {tag == 2 && <div className="mint-user">
                         <p>You can't take part in presale.</p>
-                    </div>}
+                    </div>} */}
                     {address && providerChainID == DEFAULD_NETWORK ?
-                    (tag == 0 || tag == 1) ?
+                    // (tag == 0 || tag == 1) ?
                     pendingTransactions.length > 0 ?
                     <div className="mint-btn">
                         <p>Mint {value == 1 ? `${value} NFT` : `${value} NFTs`}</p>
@@ -138,7 +138,7 @@ function Mint() {
                     <div className="mint-btn" onClick={() => onMint(tag)}>
                         <p>Mint {value == 1 ? `${value} NFT` : `${value} NFTs`}</p>
                     </div> :
-                    <></> :
+                    // <></> :
                     <div className="mint-wallet"><ConnectMenu /></div>
                     }
                 </div>

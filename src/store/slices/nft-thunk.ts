@@ -35,14 +35,14 @@ export const createNft = createAsyncThunk("mint/createNft", async ({ number, pro
 
     try {
         const gasPrice = await getGasPrice(provider);
-        // const mintPrice = Number(await nftManager.mintPrice()) / Math.pow(10, 18);
+        const mintPrice = Number(await nftManager.mintPrice()) / Math.pow(10, 18);
 
-        const mintPrice = tag != 0 ? tag != 1 ? 0.1 : 0.08 : 0.05;
+        // const mintPrice = tag != 0 ? tag != 1 ? 0.1 : 0.08 : 0.05;
 
         console.log(mintPrice)
         const etherValue = mintPrice * number;
 
-        tx = await nftManager.createNFTWhitelisted(number, {
+        tx = await nftManager.createNFT(number, {
             value: ethers.utils.parseEther(etherValue.toFixed(3)),
             gasPrice: gasPrice,
         });
